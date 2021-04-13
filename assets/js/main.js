@@ -101,9 +101,14 @@ var AUSD = {
         if(window.ethereum){
             this.web3 = new Web3(window.ethereum);
             this.web3.currentProvider.on('accountsChanged', this.handleAccountsChanged);
-            this.walletButton.addEventListener('click', this.signInOrOut);
+
+            // if(this.web3.currentProvider.isConnected()){
+            //     addWalletFunc();
+            // }else{
+                this.walletButton.addEventListener('click', this.signInOrOut);
+            // }
         }else{
-            console.log('ethereum not available')
+            console.log('Please install MetaMask');
         }
     },
 
@@ -130,10 +135,19 @@ var AUSD = {
         console.log('Please connect to MetaMask.');
       } else if (accounts[0] !== AUSD.currentAccount) {
         AUSD.currentAccount = accounts[0];
-        AUSD.walletButton.style.display = 'none';
+        AUSD.accountActive();
         // console.log(AUSD, accounts)
       }
+    },
+
+    accountActive(){
+        let len = AUSD.currentAccount.length;
+        AUSD.walletButton.textContent = AUSD.currentAccount.substr(0, 6) + '...' + AUSD.currentAccount.substr(len - 6, len);
+        AUSD.walletButton.style.backgroundColor = 'azure';
+        AUSD.walletButton.style.color = '#B8B8B8';
     }
+
+
 
 }
 

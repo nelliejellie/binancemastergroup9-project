@@ -7,7 +7,7 @@
     <title> African Dollar</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/ausd_trans.png">
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha-1.min.css">
     <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -40,8 +40,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="./index4.html">
-                            <img src="assets/img/logo.svg" alt="Logo">
+                        <a class="navbar-brand no-bgc" href="./index.html">
+                            <img src="images/ausd_logo.png" style="max-height: auto; max-width: auto; object-fit: cover;" alt="logo">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
@@ -96,41 +96,57 @@
                     </div>
                 </div>
                 <div id="flow" class="flow">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-service wow fadeInUp" data-wow-delay=".2s">
+                        <div class="d-flex justify-content-around align-items-center">
+                            <div class="service-icon mb-30 no-bgc">
+                                
+                                <img src="./images/ausd_trans.png" style="max-width: 35%; height: auto;">
+                                <img src="./images/ausd_bond_trans.png" style="max-width: 35%; height: auto;">
+                            </div>
+                            <h4>AUSD/BUSD</h4>
+                        </div>
+                        <p>Purchase AUSD bonds to earn premiums AUSD</p>
+                        <br>
+                        <div class="d-flex justify-content-between">
+                            <span>APR:</span><span>200.5%</span>
+                        </div>
+                        
+                        <div class="d-grid mx-auto mt-3">
+                            <button class="btn btn-outline-success w-100" type="button">Approve</button>
+                        </div>
+                    </div>
+                </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 bond-grp">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <h4>Purchase your AUSD Bonds</h4>
-                            <div class="service-icon mb-30">
-                                <i class="lni lni-money-protection"></i>
+                        <div class="single-service wow fadeInUp col text-center" data-wow-delay=".2s">
+                            <div class="service-icon mb-30 no-bgc">
+                                <img class="mx-auto d-block" src="./images/ausd_trans.png" style="max-width: 35%; height: auto;">
                             </div>
                             <strong>
-                                <p> AUSD --> BAUSD </p>
+                                <p class="">1AUSD = $1 </p>
                             </strong>
-                            <p>Buy to earn</p>
-                            <button class="bond-btn"><a class="btn bond-btn" href="AUSD/BUSD">Approve</a></button>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 bond-grp">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <div class="service-icon mb-30">
-                                <i class="lni lni-money-protection"></i>
-                            </div>
-                            <strong>
-                                <p>1AUSD = $1 </p>
-                            </strong>
-                        </div>
+                         <div class="single-service wow fadeInUp" data-wow-delay=".2s">
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <div class="service-icon mb-30 no-bgc">
+                                        
+                                        <img src="./images/ausd_bond_trans.png" style="max-width: 35%; height: auto;">
+                                        <img src="./images/ausd_trans.png" style="max-width: 35%; height: auto;">
+                                    </div>
+                                    <h4>BUSD/AUSD</h4>
+                                </div>
+                                <p>Redeem your bonds for $AUSD</p>
+                                <br>
+                                <div class="d-flex justify-content-between">
+                                    <span>APR:</span><span>200.5%</span>
+                                </div>
+                                
+                                <div class="d-grid mx-auto mt-3">
+                                    <button class="btn btn-outline-success w-100" type="button">Redeem</button>
+                                </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 bond-grp">
-                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
-                            <h4>Redeem your Bonds</h4>
-                            <div class="service-icon mb-30">
-                                <i class="lni lni-money-protection"></i>
-                            </div>
-                            <strong>
-                                <p> BAUSD --> AUSD </p>
-                            </strong>
-                            <p>Earn sAUSD</p>
-                            <button class="bond-btn"><a class="btn bond-btn" href="AUSD/BUSD">Redeem</a></button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -138,7 +154,7 @@
     </section>
     <footer class="footer pt-100 img-bg" style="background-image: url(assets/img/common-bg.jpg)">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
                         <a href="index-2.html" class="logo mb-40"><img src="assets/img/logo.svg" alt=""></a>
@@ -214,9 +230,9 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="copyright-area">
-                <p class="mb-0 text-white text-center">Designed and Developed By <a href="https://uideck.com/" rel="nofollow" target="_blank">UIdeck</a></p>
+                <p class="mb-0 text-white text-center">Designed and Developed By <a href="https://uideck.com/" rel="nofollow" target="_blank">Binance MasterClass Group 9</a></p>
             </div>
         </div>
     </footer>

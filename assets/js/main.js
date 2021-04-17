@@ -8,7 +8,7 @@ let loadTeam = () => {
         {name: 'Chinwe Igiri', role: 'Chief Marketing Officer', email: 'chynkemdirim@gmail.com', image: 'chinwe.png'},
         {name: 'Ikeogu Franklin', role: 'Chief Financial Officer', email: 'ikeogufranklin1@gmail.com', image: 'frank.png'},
         {name: 'Nelson Ewelike', role: 'Chief Data Officer', email: 'emekaewelike&gmail.com', image: 'nelson.png'},
-        {name: 'Jerry Uche', role: 'Chief Research Officer', email: 'jerryuche87@gmail.com', image: 'team-1.png'},
+        {name: 'Osuji Jeremiah', role: 'Chief Research Officer', email: 'jerryuche87@gmail.com', image: 'jerry.png'},
     ];
 
     let teamContainer = document.getElementById('team-row');

@@ -15,6 +15,15 @@
 	color: white;
 
 }
+.bond-img{
+	padding: 20px 0;
+  	border: 2px;
+  	text-align: center;
+	margin: 0 auto;
+}
+.bond-img img{
+	border-radius: 5px;
+}
 .flow{
 	display: none;
 	align-items: center;
@@ -30,4 +39,8 @@
   .flow {
     flex-direction: column;
   }
+}
+
+header{
+	background-color: #365ae1 !important;
 }

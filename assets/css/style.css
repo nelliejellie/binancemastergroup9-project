@@ -40,3 +40,7 @@
     flex-direction: column;
   }
 }
+
+header{
+	background-color: #365ae1 !important;
+}

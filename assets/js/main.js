@@ -1,5 +1,57 @@
 "use strict";
 
+let loadTeam = () => {
+    let team = [
+        {name: 'Neil Pretorius', role: 'Chief Executive Officer', email: 'neilxpretorius@gmail.com', image: 'neil.png'},
+        {name: 'Joseph Ogundare', role: 'Chief Operations Officer', email: 'ogundareaduragbemi@gmail.com', image: 'joseph.png'},
+        {name: 'Elvis Smart', role: 'Chief Technical Officer', email: 'elvissmart2020@gmail.com', image: 'elvo.png'},
+        {name: 'Chinwe Igiri', role: 'Chief Marketing Officer', email: 'chynkemdirim@gmail.com', image: 'chinwe.png'},
+        {name: 'Ikeogu Franklin', role: 'Chief Financial Officer', email: 'ikeogufranklin1@gmail.com', image: 'frank.png'},
+        {name: 'Nelson Ewelike', role: 'Chief Data Officer', email: 'emekaewelike&gmail.com', image: 'nelson.png'},
+        {name: 'Jerry Uche', role: 'Chief Research Officer', email: 'jerryuche87@gmail.com', image: 'team-1.png'},
+    ];
+
+    let teamContainer = document.getElementById('team-row');
+    let sroot = location.origin + '/crypto/images/';
+
+    if(page() == 'contact'){
+
+        for (var i = 0; i < team.length; i++) {
+            let member = team[i];
+
+            let memberComponent = `
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="single-team text-center mb-120 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="team-img mb-20">
+                            <img src="${member.image ? sroot + member.image : ''}" alt="">
+                            <div class="team-social-links">
+                                <ul>
+                                    <li style="color: white; font-size: .8rem;">${member.email}</li>
+                                </ul>
+                            </div>
+                            <div class="team-info">
+                                <h5>${member.name}</h5>
+                                <span>${member.role}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            teamContainer.innerHTML = teamContainer.innerHTML + memberComponent;
+        }
+
+    }
+
+    // console.log();
+}
+
+if (document.readyState === 'loading') {  // Loading hasn't finished yet
+  document.addEventListener('DOMContentLoaded', loadTeam);
+} else {  // `DOMContentLoaded` has already fired
+  loadTeam();
+}
+
 window.onload = function() { window.setTimeout(fadeout, 500); }
 
 function fadeout() {
@@ -102,11 +154,9 @@ var AUSD = {
             this.web3 = new Web3(window.ethereum);
             this.web3.currentProvider.on('accountsChanged', this.handleAccountsChanged);
 
-            // if(this.web3.currentProvider.isConnected()){
-            //     addWalletFunc();
-            // }else{
+            if(this.walletButton){
                 this.walletButton.addEventListener('click', this.signInOrOut);
-            // }
+            }
         }else{
             console.log('Please install MetaMask');
         }

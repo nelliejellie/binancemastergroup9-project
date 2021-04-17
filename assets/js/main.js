@@ -12,7 +12,7 @@ let loadTeam = () => {
     ];
 
     let teamContainer = document.getElementById('team-row');
-    let sroot = location.origin + '/crypto/images/';
+    let sroot = location.origin + ((location.origin.indexOf('localhost') > -1) ? '/crypto/images/' : '/images/');
 
     if(page() == 'contact'){
 
